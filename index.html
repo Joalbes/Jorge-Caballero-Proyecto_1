@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Juego</title>
+</head>
+
+<body>
+    <main class="h-auto w-auto flex flex-row justify-center m-[4rem] rounded">
+        <section class="flex flex-col items-center bg-cyan-500 w-[20rem]  h-auto">
+            <!-- Titulo -->
+            <h1 class="pt-[2rem] font-bold text-pink-600 italic text-3xl">JUEGO AHORCADO</h1>
+            <!-- Caja ahorcado -->
+            <div class="flex flex-col  items-center">
+                <!-- Imagen Ahorcado -->
+                <figure id="imagen_ahorcado" class="p-[2rem]">
+                    <img src="./assets/ahorcado0.png" alt="">
+                </figure>
+                <!-- Contenedor palabra a validar y boton -->
+                <div id="palabra_verificandose" class="w-full flex flex-col justify-start ">
+                    <!-- Contenedor palabra a validar -->
+                    <div id="contendor_palabra_a_validar">                 
+                    </div>               
+                </div>
+            </div>
+            <!-- Caja entrada de datos         -->            
+            <div id="caja_entrada_datos" class="flex flex-col p-[1rem]">
+                <!-- Entrada datos            -->
+                <form action="" >
+                    <label for="entrada_letra" class="flex flex-col p-[1rem]">
+                        <scan>Ingrese una letra:</scan>
+                        <input type="text" id="entrada_letra" name="entrada"  class="rounded" maxlength="1">
+                    </label>
+                </form>                
+                <!-- Historico de letras usadas -->
+                <div class="p-[1rem]">
+                    <p>Historico:</p>
+                    <div id="contedor-historico" class="w-full h-auto bg-lime-100 border-solid border-2 border-black flex flex-row">                                            
+                    </div>
+                </div>
+            </div>
+            <!-- Botenes Jugar y Reset -->
+            <div id="botones" class="flex flex-col items-center  w-full">
+                <button id="btn_enviar" class="p-[1rem] bg-lime-700 rounded m-[0.5rem] w-[6rem]">Enviar</button>
+                <button id="btn_reiniciar" class="p-[1rem] bg-lime-700 rounded m-[0.5rem] w-[6rem]">Reiniciar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./main.console.js"></script>
+</body>
+</html>
